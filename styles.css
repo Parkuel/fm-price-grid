@@ -1,0 +1,227 @@
+* {
+    box-sizing: border-box;
+  }
+
+body {
+    height: 100vh;
+    /* margin: 0; */
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: hsl(204, 43%, 93%);
+    font-size: 16px;
+    font-family:  'Karla', sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 600px;
+    display: grid;
+    grid-template: repeat(2, 1fr) / 1fr 1fr;
+    grid-template-areas: 
+    "description description"
+    "subscription about-us"
+    ;
+    box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.103);
+    border-radius: 8px;
+}
+
+.description {
+    border-radius: 8px 8px 0 0;
+    grid-area: description;
+    background-color:#ffffff;
+    padding: 40px 40px 0 40px;
+}
+
+.description h1 {
+    color: hsl(179, 62%, 43%);
+    font-size: 1.5rem;
+
+}
+
+.description h3 {
+    color: hsl(71, 73%, 54%);
+    margin: 20px 0 -5px 0;
+}
+
+.description p {
+    color: hsl(218, 22%, 67%);
+    line-height: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.subscription {
+    border-radius: 0 0 0 8px;
+    grid-area: subscription;
+    background-color: hsl(179, 62%, 43%);
+    padding: 10px;
+    color:#ebffff;
+    padding: 20px 40px;
+}
+
+.subscription h3 {
+    font-size: 1rem;
+}
+
+.per-month {
+    opacity: 0.5;
+    font-size: 0.8rem;
+    margin-left: 10px;
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.day-price {
+    font-size: 0.8rem;
+}
+
+.subscription > button {
+    background-color: hsl(71, 73%, 54%);
+    border: 0;
+    color:hsl(204, 43%, 93%);
+    padding: 10px;
+    width: 200px;
+    margin: 20px 0 30px 0;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    box-shadow: 0 7px 10px 5px rgba(0, 0, 0, 0.103);
+}
+
+.about-us {
+    border-radius: 0 0 8px 0;
+    grid-area: about-us;
+    background-color: hsl(179, 100%, 42%);
+    padding: 10px;
+    color:#ebffff;
+    padding: 20px 40px;
+}
+
+.about-us h3 {
+    font-size: 1rem;
+}
+
+.about-us p {
+    line-height: 1.2rem;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+@media only screen and (max-width: 600px) {
+
+    body{
+        height: 80vh;
+        justify-content: center;
+        align-items: center;
+        overflow: visible;
+        margin: 100px 0 70px 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 240px;
+        display: grid;
+        grid-template: 1fr / 1fr 1fr 1fr;
+        grid-template-areas: 
+        "description"
+        "subscription"
+        "about-us"
+        ;
+        box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.103);
+        border-radius: 8px;
+    }
+
+    .description, .subscription, .about-us {
+        height: auto;
+    }
+
+    .description {
+        border-radius: 8px 8px 0 0;
+        background-color:#ffffff;
+        padding: 20px 25px 10px 25px;
+    }
+    
+    .description h1 {
+        color: hsl(179, 62%, 43%);
+        font-size: 1rem;
+    
+    }
+    
+    .description h3 {
+        color: hsl(71, 73%, 54%);
+        margin: 10px 0 1px 0;
+        font-size: 0.8rem;
+    }
+    
+    .description p {
+        color: hsl(218, 22%, 67%);
+        line-height: 20px;
+        font-size: 0.7rem;
+    }
+    
+    .subscription {
+        border-radius: 0 0 0 0;
+        grid-area: subscription;
+        background-color: #2bb3b1;
+        padding: 10px;
+        color:#ebffff;
+        padding: 20px 25px 10px 25px;
+    }
+    
+    .subscription h3 {
+        font-size: 0.8rem;
+    }
+    
+    .per-month {
+        opacity: 0.5;
+        font-size: 0.7rem;
+        margin-left: 10px;
+    }
+    
+    .price {
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+    
+    .day-price {
+        font-size: 0.7rem;
+    }
+    
+    .subscription > button {
+        background-color: hsl(71, 73%, 54%);
+        border: 0;
+        color:hsl(204, 43%, 93%);
+        padding: 10px;
+        width: 190px;
+        margin: 15px 0 10px 0;
+        font-size: 0.8rem;
+        border-radius: 5px;
+        box-shadow: 0 7px 10px 5px rgba(0, 0, 0, 0.103);
+    }
+    
+    .about-us {
+        border-radius: 0 0 8px 8px;
+        grid-area: about-us;
+        background-color: #4abebd;
+        padding: 10px 0 0 0;
+        color:#ebffff;
+        padding: 20px 25px 10px 25px;
+    }
+    
+    .about-us h3 {
+        font-size: 0.8rem;
+    }
+    
+    .about-us p {
+        font-weight: lighter;
+        line-height: 1rem;
+        font-size: 0.7rem;
+        opacity: 0.8;
+    }
+}
